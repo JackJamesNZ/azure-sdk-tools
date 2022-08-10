@@ -21,36 +21,47 @@
                     {
                         case "c#":
                             <span><img class="mx-1" src="~/icons/csharp-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Csharp.css" asp-append-version="true" />
                             break;
                         case "javascript":
                             <span><img class="mx-1" src="~/icons/javascript-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Javascript.css" asp-append-version="true" />
                             break;
                         case "python":
                             <span><img class="mx-1" src="~/icons/python-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Python.css" asp-append-version="true" />
                             break;
                         case "c":
                             <span><img class="mx-1" src="~/icons/c-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/C.css" asp-append-version="true" />
                             break;
                         case "c++":
                             <span><img class="mx-1" src="~/icons/cplusplus-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Cpp.css" asp-append-version="true" />
                             break;
                         case "go":
                             <span><img class="mx-1" src="~/icons/go-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Go.css" asp-append-version="true" />
                             break;
                         case "java":
                             <span><img class="mx-1" src="~/icons/java-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Java.css"/>
                             break;
                         case "swift":
                             <span><img class="mx-1" src="~/icons/swift-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Swift.css" asp-append-version="true" />
                             break;
                         case "kotlin":
                             <span><img class="mx-1" src="~/icons/kotlin-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Kotlin.css" asp-append-version="true" />
                             break;
                         case "json":
                             <span><img class="mx-1" src="~/icons/json-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Json.css" asp-append-version="true" />
                             break;
                         case "swagger":
                             <span><img class="mx-1" src="~/icons/swagger-original.svg" width="40" alt="@Model.Review.Language"></span>
+                            <link rel="stylesheet" href="~/Swagger.css" asp-append-version="true" />
                             break;
                         default:
                             <span class="badge badge-info"><em>@Model.Review.Language</em></span>
@@ -306,13 +317,13 @@
                 @{
                     var popOverContent = $"<b>{Model.ActiveConversations}</b> active revision threads.<br><b>{Model.TotalActiveConversations}</b> total active threads.<br>"
                     + $"<b>Current Revision:</b> <em>{@Model.Revision.DisplayName}</em>";
-                        @if (Model.DiffRevisionId != null)
+                                @if (Model.DiffRevisionId != null)
                     {
                         popOverContent += $"<br><b>Current Diff:</b> <em>{@Model.DiffRevision?.DisplayName}</em>";
                     }
-                        <button type="button" class="btn btn-info btn-sm shadow-sm" data-placement="bottom" data-trigger="focus" data-toggle="popover" data-html="true" data-title="Page Info" data-content="@popOverContent">
-                            <i class="far fa-comment-alt mr-2"></i><span class="badge badge-light">@Model.ActiveConversations / @Model.TotalActiveConversations</span>
-                        </button>
+                                <button type="button" class="btn btn-info btn-sm shadow-sm" data-placement="bottom" data-trigger="focus" data-toggle="popover" data-html="true" data-title="Page Info" data-content="@popOverContent">
+                                    <i class="far fa-comment-alt mr-2"></i><span class="badge badge-light">@Model.ActiveConversations / @Model.TotalActiveConversations</span>
+                                </button>
                 }
             </div>
             <div class="float-right ml-2 my-1">

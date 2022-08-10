@@ -13,7 +13,20 @@ module.exports = {
     reviews: './src/reviews.ts',
     main: './src/main.ts',
     api: './src/api.ts',
-    site: './css/site.scss'
+    
+    c: './css/c.scss',
+    cpp: './css/cpp.scss',
+    csharp: './css/csharp.scss',
+    go: './css/go.scss',
+    java: './css/java.scss',
+    javascript: './css/javascript.scss',
+    json: './css/json.scss',
+    kotlin: './css/kotlin.scss',
+    python: './css/python.scss',
+    site: './css/site.scss',
+    swagger: './css/swagger.scss',
+    swift: './css/swift.scss',
+    xml: './css/xml.scss'
   },
   devtool: 'source-map',
   module: {
@@ -47,11 +60,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'site.css'
+      filename: "[name].css"
     }),
   ],
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: '[name].js',

@@ -3,6 +3,7 @@
 @using System
 @using System.Text.RegularExpressions
 @model (IEnumerable<ReviewModel> Reviews, int TotalCount, int TotalPages, int CurrentPage, int? PreviousPage, int? NextPage)
+
 <div class="mt-3 row">
     @if (Model.Reviews.Any())
     {

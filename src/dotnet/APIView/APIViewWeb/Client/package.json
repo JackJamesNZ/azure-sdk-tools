@@ -6,7 +6,7 @@
   "publicPath": "../wwwroot/",
   "outputDir": "../wwwroot/",
   "scripts": {
-    "build": "webpack --config webpack.config.js --mode=production",
+    "build": "webpack --config webpack.config.js --mode=production ",
     "watch": "webpack --watch"
   },
   "dependencies": {
